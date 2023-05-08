@@ -1,0 +1,46 @@
+<template>
+  <div>
+    <h1>Stored Array Elements:</h1>
+    <ul>
+      <li v-for="(element, index) in storedArray" :key="index">{{ element }}</li>
+    </ul>
+  </div>
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const storedArray = ref(JSON.parse(localStorage.getItem('myArray') || '[]'))
+
+// Store the updated array in localStorage whenever it changes
+const storeArray = (newArray) => {
+  localStorage.setItem('myArray', JSON.stringify(newArray))
+}
+
+// Example function to add a new element to the array
+const addElement = (newElement) => {
+  storedArray.value.push(newElement)
+  storeArray(storedArray.value)
+}
+
+onMounted(() => {
+  console.log(storedArray.value) // Display the stored array in the console
+})
+</script>
+
+<!-- Render the stored array elements in the template -->
+<template>
+  <div>
+    <h1>Stored Array Elements:</h1>
+    <ul>
+      <li v-for="(element, index) in storedArray" :key="index">{{ element }}</li>
+    </ul>
+  </div>
+</template>
+
+<!-- Add a button to add a new element to the array -->
+<template>
+  <div>
+    <button @click="addElement('New Element')">Add Element</button>
+  </div>
+</template>

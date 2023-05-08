@@ -1,0 +1,41 @@
+***Topic Covered**
+npm init vue@latest
+//To make css for that file only add "scoped"  keyword inside style tag as a attribute
+//To use the composite API add "setup" keyword inside script tag as a attribute
+//"setup" is entry point of composite API
+// In options api we store  state varible inside "data" function
+// In composite api we store state variable inside "ref"
+
+1. v-if ,v-else
+2. v-show
+3. two way binding (v-model)
+4. v-for
+5. storing state variable in composite API(ref)
+6. watch method and use cases
+7. components (How make it reusable)
+8. props (For passing data from parent to child) => to use this we need to include the "defineProps"
+9. to make string into javascript for fetching the imgage add double colon before source(src attribute of image).
+10.Router
+    =>In  router folder, inside index.js -> import {createRouter,createWebHistory} from "vue-router";
+    =>Use RouterLink to link the routes
+    =>"useRoute" is use for taking data(information) from API calls we the use of params
+    =>"useRouter" is use for assigning the router path
+    => "defineProps" are use for fetching data from another file which is passed as parameter
+11.Adding Link(anchor tag)
+    =>We have two methods do that
+    =>one is using "RouterLink" -> making routes for each 
+    =>programatic way using "useRouter"
+
+**Pending Topics**
+Lifecycle hooks
+suspense
+slots
+keep alive
+compossable 
+Authentication
+pinia
+database relations
+uploading photos
+pagination
+vue ui library
+
