@@ -25,6 +25,7 @@ npm init vue@latest
     =>We have two methods do that
     =>one is using "RouterLink" -> making routes for each 
     =>programatic way using "useRouter"
+12. props (For passing data from  child to parent) => to use this we need to include the "defineEmits"
 
 **Pending Topics**
 Lifecycle hooks
